@@ -1,15 +1,16 @@
-//
-//  ViewController.h
-//  Play Audio Video
-//
-//  Created by Amir on 10/18/17.
-//  Copyright © 2017 Cinard Digital Media Institute. All rights reserved.
-//
+#import <AVFoundation/AVFoundation.h>
+
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <AVAudioPlayerDelegate>
 
 
+
+@property (weak, nonatomic) IBOutlet UIProgressView *playProgressView;
+@property (nonatomic) AVAudioPlayer *audioPlayer;
+
+
+-(IBAction)playAudio:(id)sender;
 @end
 

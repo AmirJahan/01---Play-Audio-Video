@@ -1,28 +1,51 @@
-//
-//  ViewController.m
-//  Play Audio Video
-//
-//  Created by Amir on 10/18/17.
-//  Copyright © 2017 Cinard Digital Media Institute. All rights reserved.
-//
-
 #import "ViewController.h"
 
-@interface ViewController ()
-
-@end
 
 @implementation ViewController
+NSTimer* myTimeer;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
+-(IBAction)playAudio:(id)sender
+{
+    NSString *path = [[NSBundle mainBundle]
+                      pathForResource:@"33 Hey Brother" ofType:@"mp3"];
+    
+    // NSURL
+    
+    _audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:
+                   [NSURL fileURLWithPath:path] error:NULL];
+    
+    
+    [_audioPlayer play];
+    
+    
+    myTimeer = [NSTimer scheduledTimerWithTimeInterval:0.1
+                                                         target:self
+                                                       selector:@selector(progressMethod:)
+                                                       userInfo:nil
+                                                        repeats:YES];
+    
+    
+    _playProgressView.progress = 0;
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+-(void)progressMethod:(NSTimer*)timer {
+    
+    float currentProgFloat = _audioPlayer.currentTime / _audioPlayer.duration;
+    
+    _playProgressView.progress = currentProgFloat;
+}
+
+-(void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
+{
+    
+    [myTimeer invalidate];
+    _playProgressView.progress = 0;
 }
 
 

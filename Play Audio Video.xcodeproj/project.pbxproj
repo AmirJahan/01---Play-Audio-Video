@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		298B18051F9A888400A8697F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 298B18041F9A888400A8697F /* AVFoundation.framework */; };
 		29C93B8A1F97F07500BB5A1E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C93B891F97F07500BB5A1E /* AppDelegate.m */; };
 		29C93B8D1F97F07500BB5A1E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C93B8C1F97F07500BB5A1E /* ViewController.m */; };
 		29C93B901F97F07500BB5A1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29C93B8E1F97F07500BB5A1E /* Main.storyboard */; };
 		29C93B921F97F07500BB5A1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29C93B911F97F07500BB5A1E /* Assets.xcassets */; };
 		29C93B951F97F07500BB5A1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29C93B931F97F07500BB5A1E /* LaunchScreen.storyboard */; };
 		29C93B981F97F07500BB5A1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C93B971F97F07500BB5A1E /* main.m */; };
+		29C93B9F1F97F1DC00BB5A1E /* 33 Hey Brother.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 29C93B9E1F97F17400BB5A1E /* 33 Hey Brother.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		298B18041F9A888400A8697F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		29C93B851F97F07500BB5A1E /* Play Audio Video.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Play Audio Video.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29C93B881F97F07500BB5A1E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		29C93B891F97F07500BB5A1E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		29C93B941F97F07500BB5A1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29C93B961F97F07500BB5A1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29C93B971F97F07500BB5A1E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29C93B9E1F97F17400BB5A1E /* 33 Hey Brother.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "33 Hey Brother.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				298B18051F9A888400A8697F /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		298B18031F9A888400A8697F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				298B18041F9A888400A8697F /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		29C93B7C1F97F07500BB5A1E = {
 			isa = PBXGroup;
 			children = (
 				29C93B871F97F07500BB5A1E /* Play Audio Video */,
 				29C93B861F97F07500BB5A1E /* Products */,
+				298B18031F9A888400A8697F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +75,7 @@
 				29C93B881F97F07500BB5A1E /* AppDelegate.h */,
 				29C93B891F97F07500BB5A1E /* AppDelegate.m */,
 				29C93B8B1F97F07500BB5A1E /* ViewController.h */,
+				29C93B9E1F97F17400BB5A1E /* 33 Hey Brother.mp3 */,
 				29C93B8C1F97F07500BB5A1E /* ViewController.m */,
 				29C93B8E1F97F07500BB5A1E /* Main.storyboard */,
 				29C93B911F97F07500BB5A1E /* Assets.xcassets */,
@@ -131,6 +146,7 @@
 			files = (
 				29C93B951F97F07500BB5A1E /* LaunchScreen.storyboard in Resources */,
 				29C93B921F97F07500BB5A1E /* Assets.xcassets in Resources */,
+				29C93B9F1F97F1DC00BB5A1E /* 33 Hey Brother.mp3 in Resources */,
 				29C93B901F97F07500BB5A1E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
